@@ -1,5 +1,7 @@
 # Simple Accordion Blocks 🗄
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=vikichand/simple-accordion-blocks) 
+
 Simple Accordion Blocks is a simple plugin that extends Accordion Blocks which adds a Gutenberg block for adding modern looking accordion drop-downs to your pages.
 
 The accordions should blend seamlessly with your theme. However, you may want to add custom styles to your theme.
