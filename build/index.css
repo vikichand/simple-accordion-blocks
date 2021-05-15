@@ -1,0 +1,141 @@
+:root {
+    --v-transition: all 0.5s;
+}
+
+:focus {
+    outline: unset;
+}
+
+.block-editor-block-list__layout .v-accordion__item {
+    padding-bottom: 20px;
+}
+
+.v-accordion__item {
+    border-radius: 5px;
+    transition: var(--v-transition);
+}
+
+@media (min-width: 768px) {
+    .block-editor-block-list__layout .v-accordion__item {
+        width: 100%;
+    }
+
+    .v-accordion__item {
+        width: 75%;
+    }
+}
+
+.v-accordion__item:hover {
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--v-transition);
+}
+
+.v-accordion__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.v-accordion__item.no-js .v-accordion__content {
+    display: block !important;
+}
+
+.v-accordion__item.no-js .v-accordion__title {
+    padding-right: none;
+    cursor: default;
+}
+
+.v-accordion__item.no-js .v-accordion__title:after {
+    display: none;
+}
+
+.v-accordion__title--button {
+    display: inline-block;
+    color: inherit;
+    background-color: transparent;
+    text-align: left;
+    vertical-align: middle;
+    font: inherit;
+    text-decoration: none;
+    direction: ltr;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    transition: 0;
+    box-shadow: none;
+    overflow: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.v-accordion__title--button:focus,
+.v-accordion__title--button:hover {
+    color: inherit;
+    background-color: transparent;
+}
+
+.v-accordion__title {
+    position: relative;
+    margin-bottom: 0 !important;
+    padding: 20px;
+    padding-right: 50px;
+    /* font-weight: 600;
+    font-size: inherit;
+    color: inherit; */
+    cursor: pointer;
+}
+
+.v-accordion__title:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("https://cdn.statically.io/gist/koptyaisky/33f5da3d9e6b6cacdf5a353ad033c2ea/raw/c8468a17e0141ee82a2571deea1f76162abb47b6/arrow-down-blue.svg")
+        no-repeat center;
+    background-size: contain;
+    transition: var(--v-transition);
+}
+
+.v-accordion__content {
+    margin-left: 2rem;
+    padding: 0 40px 0 20px;
+    /* font-weight: 300;
+    font-size: inherit;
+    color: inherit; */
+    line-height: 1.5;
+}
+
+.v-accordion__content p {
+    margin-bottom: 0 !important;
+}
+
+.is-open {
+    padding-bottom: 30px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    transition: var(--v-transition);
+}
+
+.is-open .v-accordion__title::after {
+    transform: rotate(-180deg);
+}
+
+.is-open .v-accordion__content {
+    border-left: 1px solid #cccccc;
+}
+
+[data-initially-open="false"] .v-accordion__content {
+    display: none;
+}
+
+@media print {
+    .v-accordion__content {
+        display: block !important;
+    }
+}
